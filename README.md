@@ -119,7 +119,7 @@ lib/
 │   └── contact_detail_screen.dart # View contact detail
 │
 ├── widgets/
-│   ├── custom_slidable_tile.dart #Reusable widget 
+│   ├── custom_slidable_tile.dart # Reusable widget 
 │   └── contact_tile.dart         # Reusable widget
 │
 ├── utils/
