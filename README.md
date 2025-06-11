@@ -50,7 +50,8 @@ The app loads from local SQLite first and uses Firestore for syncing. Any change
 | Offline DB     | SQLite using `sqflite`          |
 | Offline Sync   | `connectivity_plus`             |
 | Calling        | `url_launcher`                  |
-| responsiveness | `flutter_screenutil`            |
+| Authentication | `google_sign_in`                |
+| Responsiveness | `flutter_screenutil`            |
 
 
 ---
