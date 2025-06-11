@@ -1,7 +1,11 @@
+import 'package:contacts_app/models/contact.dart';
 import 'package:contacts_app/screens/login_screen.dart';
+import 'package:contacts_app/widgets/custom_slidable_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../providers/contact_provider.dart';
 import '../screens/add_edit_contact_screen.dart';
 import '../widgets/contact_tile.dart';
@@ -12,6 +16,7 @@ class ContactsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final contacts = context.watch<ContactProvider>().contacts;
+    final provider = Provider.of<ContactProvider>(context, listen: false);
 
     return Scaffold(
       appBar: AppBar(
@@ -20,8 +25,8 @@ class ContactsScreen extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.logout),
             onPressed: () async {
-              final provider =
-                  Provider.of<ContactProvider>(context, listen: false);
+              // final provider =
+              //     Provider.of<ContactProvider>(context, listen: false);
               await provider.signOut();
               if (context.mounted) {
                 Navigator.pushReplacement(
@@ -49,11 +54,17 @@ class ContactsScreen extends StatelessWidget {
                   ],
                 ),
               )
-            : ListView.builder(
-                physics: const BouncingScrollPhysics(),
-                padding: EdgeInsets.only(top: 10.h),
-                itemCount: contacts.length,
-                itemBuilder: (context, i) => ContactTile(contact: contacts[i]),
+            : SlidableAutoCloseBehavior(
+                child: ListView.builder(
+                  physics: const BouncingScrollPhysics(),
+                  padding: EdgeInsets.only(top: 10.h),
+                  itemCount: contacts.length,
+                  // itemBuilder: (context, i) => ContactTile(contact: contacts[i]),
+                  itemBuilder: (context, i) => CustomSlidableContactTile(
+                    contact: contacts[i],
+                    provider: provider,
+                  ),
+                ),
               ),
       ),
       floatingActionButton: FloatingActionButton(

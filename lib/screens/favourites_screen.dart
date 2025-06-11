@@ -1,5 +1,7 @@
+import 'package:contacts_app/widgets/custom_slidable_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:provider/provider.dart';
 import '../providers/contact_provider.dart';
 import '../widgets/contact_tile.dart';
@@ -10,6 +12,7 @@ class FavoritesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final favorites = context.watch<ContactProvider>().favorites;
+    final provider = context.read<ContactProvider>();
 
     return Scaffold(
       appBar: AppBar(title: const Text('Favorites')),
@@ -28,11 +31,17 @@ class FavoritesScreen extends StatelessWidget {
                   ],
                 ),
               )
-            : ListView.builder(
-                padding: EdgeInsets.only(top: 10.h),
-                physics: const BouncingScrollPhysics(),
-                itemCount: favorites.length,
-                itemBuilder: (context, i) => ContactTile(contact: favorites[i]),
+            : SlidableAutoCloseBehavior(
+                child: ListView.builder(
+                  padding: EdgeInsets.only(top: 10.h),
+                  physics: const BouncingScrollPhysics(),
+                  itemCount: favorites.length,
+                  // itemBuilder: (context, i) => ContactTile(contact: favorites[i]),
+                  itemBuilder: (context, i) => CustomSlidableContactTile(
+                    contact: favorites[i],
+                    provider: provider,
+                  ),
+                ),
               ),
       ),
     );

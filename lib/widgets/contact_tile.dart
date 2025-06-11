@@ -32,9 +32,15 @@ class ContactTile extends StatelessWidget {
             ),
           ),
         ),
-        title: Text(
-          contact.name,
-          style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w600),
+        title: SizedBox(
+          width: 100.w,
+          child: Text(
+            contact.name,
+            style: TextStyle(
+                fontSize: 16.sp,
+                fontWeight: FontWeight.w600,
+                overflow: TextOverflow.ellipsis),
+          ),
         ),
         subtitle: Text(
           contact.phone,

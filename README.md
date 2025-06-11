@@ -119,7 +119,8 @@ lib/
 │   └── contact_detail_screen.dart # View contact detail
 │
 ├── widgets/
-│   └── contact_tile.dart        # Reusable widget
+│   ├── custom_slidable_tile.dart #Reusable widget 
+│   └── contact_tile.dart         # Reusable widget
 │
 ├── utils/
 │   └── validators.dart         # Contains input validation logic for forms (e.g., name, email, phone)
