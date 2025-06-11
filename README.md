@@ -41,7 +41,7 @@ The app loads from local SQLite first and uses Firestore for syncing. Any change
 
 ## 🧱 Tech Stack
 
-|----------------|---------------------------------|
+
 | Layer          | Technology                      |
 |----------------|---------------------------------|
 | Framework      | Flutter                         |
@@ -50,7 +50,7 @@ The app loads from local SQLite first and uses Firestore for syncing. Any change
 | Offline DB     | SQLite using `sqflite`          |
 | Offline Sync   | `connectivity_plus`             |
 | Calling        | `url_launcher`                  |
-|----------------|---------------------------------|
+
 
 ---
 
@@ -115,7 +115,7 @@ lib/
 │   ├── add_edit_contact_screen.dart # Add/Edit contact
 │   ├── contacts_screen          # Displays the list of all contacts
 │   ├── favourites_screen        # Displays contacts marked as favorites
-│   └── contact_detail_screen.dart # View contact
+│   └── contact_detail_screen.dart # View contact detail
 │
 ├── widgets/
 │   └── contact_tile.dart        # Reusable widget
