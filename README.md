@@ -50,6 +50,7 @@ The app loads from local SQLite first and uses Firestore for syncing. Any change
 | Offline DB     | SQLite using `sqflite`          |
 | Offline Sync   | `connectivity_plus`             |
 | Calling        | `url_launcher`                  |
+| responsiveness | `flutter_screenutil`            |
 
 
 ---
@@ -60,7 +61,7 @@ The app loads from local SQLite first and uses Firestore for syncing. Any change
 - Flutter 3.x
 - Dart SDK
 - Firebase project
-- Android/iOS emulator or physical device
+- Android emulator or physical device
 
 ### 2. 🔨 Clone the Repo
 ```bash
@@ -76,7 +77,6 @@ flutter pub get
 ### 4. 🔥 Firebase Setup
 - Enable Firebase in your Flutter project:
   - Android: Add `google-services.json`
-  - iOS: Add `GoogleService-Info.plist`
 - Enable **Cloud Firestore** from Firebase Console.
 
 
