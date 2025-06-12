@@ -60,6 +60,22 @@ The app loads from local SQLite first and uses Firestore for syncing. Any change
 
 You can download the latest release APK here [![Download APK](https://img.shields.io/badge/Download-APK-blue.svg?style=for-the-badge)](https://github.com/Zafar-Iqbal-Khan/contacts_app/raw/main/release_apk/app-release.apk)
 
+---
+## 📸 Screenshots
+
+<p align="center">
+
+  <img src="https://github.com/user-attachments/assets/3e494d5a-add7-42db-99de-5cb01a149616" width="250">
+  <img src="https://github.com/user-attachments/assets/e8fee6c1-4e0f-4ba9-b15a-78bd312d8e04" width="250">
+  <img src="https://github.com/user-attachments/assets/88fb6b99-6d30-4665-ba01-efd2078c95c9" width="250">
+  <img src="https://github.com/user-attachments/assets/01436649-c09e-4082-abe3-5f1c185d5abe" width="250">
+  <img src="https://github.com/user-attachments/assets/6b737a4b-dce6-4089-aa2e-ebd31c73ad0c" width="250">
+  <img src="https://github.com/user-attachments/assets/ebd90bee-8181-4616-8a77-643b63f40045" width="250">
+  <img src="https://github.com/user-attachments/assets/7ffd5337-50f7-4826-9a42-3c874fa0d060" width="250">
+  <img src="https://github.com/user-attachments/assets/8becdce2-5a9d-4988-8ebb-82a91c0d8866" width="250">
+  <img src="https://github.com/user-attachments/assets/031e4c66-b49a-4f21-a151-09a5169495a6" width="250">
+  
+</p>
 
 ---
 
