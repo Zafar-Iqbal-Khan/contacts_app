@@ -21,22 +21,6 @@ class ContactsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Contacts'),
-        // actions: [
-        //   IconButton(
-        //     icon: const Icon(Icons.logout),
-        //     onPressed: () async {
-        //       // final provider =
-        //       //     Provider.of<ContactProvider>(context, listen: false);
-        //       await provider.signOut();
-        //       if (context.mounted) {
-        //         Navigator.pushReplacement(
-        //           context,
-        //           MaterialPageRoute(builder: (context) => const LoginScreen()),
-        //         );
-        //       }
-        //     },
-        //   ),
-        // ],
       ),
       body: SafeArea(
         child: contacts.isEmpty
@@ -59,7 +43,6 @@ class ContactsScreen extends StatelessWidget {
                   physics: const BouncingScrollPhysics(),
                   padding: EdgeInsets.only(top: 10.h),
                   itemCount: contacts.length,
-                  // itemBuilder: (context, i) => ContactTile(contact: contacts[i]),
                   itemBuilder: (context, i) => CustomSlidableContactTile(
                     contact: contacts[i],
                     provider: provider,

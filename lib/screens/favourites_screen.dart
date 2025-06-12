@@ -36,7 +36,6 @@ class FavoritesScreen extends StatelessWidget {
                   padding: EdgeInsets.only(top: 10.h),
                   physics: const BouncingScrollPhysics(),
                   itemCount: favorites.length,
-                  // itemBuilder: (context, i) => ContactTile(contact: favorites[i]),
                   itemBuilder: (context, i) => CustomSlidableContactTile(
                     contact: favorites[i],
                     provider: provider,

@@ -67,28 +67,6 @@ class _AddEditContactScreenState extends State<AddEditContactScreen> {
                 validator: validateEmail,
               ),
               SizedBox(height: 20.h),
-              // ElevatedButton.icon(
-              //   icon: Icon(isEdit ? Icons.update : Icons.add),
-              //   label: Text(isEdit ? 'Update Contact' : 'Add Contact'),
-              //   onPressed: () {
-              //     if (_formKey.currentState!.validate()) {
-              //       final provider = context.read<ContactProvider>();
-              //       final contact = Contact(
-              //         id: isEdit ? widget.contact!.id : UniqueKey().toString(),
-              //         name: _name.text.trim(),
-              //         phone: _phone.text.trim(),
-              //         email: _email.text.trim(),
-              //         isFavorite: isEdit ? widget.contact!.isFavorite : false,
-              //       );
-
-              //       isEdit
-              //           ? provider.updateContact(contact)
-              //           : provider.addContact(contact);
-
-              //       Navigator.pop(context);
-              //     }
-              //   },
-              // ),
               CustomButton(
                 isEdit: isEdit,
                 formKey: _formKey,
