@@ -56,6 +56,13 @@ The app loads from local SQLite first and uses Firestore for syncing. Any change
 
 ---
 
+## 📥 Download APK
+
+You can download the latest release APK here [![Download APK](https://img.shields.io/badge/Download-APK-blue.svg?style=for-the-badge)](https://github.com/Zafar-Iqbal-Khan/contacts_app/raw/main/release_apk/app-release.apk)
+
+
+---
+
 ## 🛠 Setup Instructions
 
 ### 1. 🔧 Prerequisites
